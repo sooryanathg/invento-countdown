@@ -40,3 +40,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Responsive styles for countdown page */
+@media (max-width: 768px) {
+  /* Scale down all fixed pixel values proportionally for mobile */
+  /* Base scale factor: approximately 0.35-0.4 for mobile */
+  
+  /* Hide or scale decorative elements on mobile */
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .mobile-scale-40 {
+    transform: scale(0.4) !important;
+    transform-origin: center center;
+  }
+  
+  .mobile-scale-30 {
+    transform: scale(0.3) !important;
+    transform-origin: center center;
+  }
+}
