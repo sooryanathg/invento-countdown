@@ -135,10 +135,10 @@ export default function CountdownPage() {
         <TimeLabel label="Seconds" top="15%" fontSize="18px" left="calc(50% - 132.37px/2 + 25px)" />
       </div>
       <div data-countdown="days">
-        <CountdownDisplay value={timeLeft.days} top="46%" fontSize="80px" left="calc(50% - 59.96px/2 - 5px)" />
+        <CountdownDisplay value={timeLeft.days} top="48%" fontSize="80px" left="calc(50% - 59.96px/2 - 5px)" />
       </div>
       <div data-label="days">
-        <TimeLabel label="Days" top="59.5%" fontSize="40px" left="calc(50% - 132.37px/2 + 10px)" />
+        <TimeLabel label="Days" top="63.5%" fontSize="40px" left="calc(50% - 132.37px/2 + 10px)" />
       </div>
       
       <style dangerouslySetInnerHTML={{

@@ -78,7 +78,7 @@ export default function SemicircularDial() {
             type="rotate"
             from={`0 ${centerX} ${centerY}`}
             to={`360 ${centerX} ${centerY}`}
-            dur={isFastRotation ? "3.5s" : "17s"}
+            dur={isFastRotation ? "3.5s" : "30s"}
             repeatCount="indefinite"
           />
           <circle

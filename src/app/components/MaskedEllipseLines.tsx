@@ -89,7 +89,7 @@ export default function SemicircularPinArc() {
               type="rotate"
               from={`0 ${centerX} ${centerY}`}
               to={`360 ${centerX} ${centerY}`}
-              dur={isFastRotation ? "12s" : "60s"}
+              dur={isFastRotation ? "12s" : "90s"}
               repeatCount="indefinite"
               calcMode="linear"
             />
