@@ -43,8 +43,16 @@ export default function TrapezoidGradient() {
             }
           }
           @media (max-width: 393px) {
+            .${uniqueId} {
+              width: 330px !important;
+              height: calc(180vh + 15px) !important;
+              left: calc(50% - 330px/2) !important;
+            }
+            .${uniqueId} svg {
+              viewBox: "-65 0 430 3500" !important;
+            }
             .${uniqueId} .trapezoid-path-mobile {
-              d: path("M136 0H136L305 3015H-33L136 0Z") !important;
+              d: path("M136 0H194L365 3500H-93L136 0Z") !important;
             }
           }
           @media (min-width: 390px) and (max-width: 410px) {

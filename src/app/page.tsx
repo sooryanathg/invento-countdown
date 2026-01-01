@@ -261,7 +261,7 @@ export default function CountdownPage() {
               top: 12% !important;
             }
             [data-countdown="days"] > * {
-              top: 40% !important;
+              top: 41% !important;
             }
             [data-label="days"] > * {
               top: 50% !important;
