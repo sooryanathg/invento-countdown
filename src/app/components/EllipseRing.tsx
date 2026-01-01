@@ -34,6 +34,15 @@ export default function EllipseRing({
               top: -300px !important;
             }
           }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .${uniqueId} {
+              width: ${parseFloat(width) * 0.7}px !important;
+              height: ${parseFloat(height) * 0.7}px !important;
+              left: calc(50% - ${parseFloat(width) * 0.7}px/2) !important;
+              border-width: 2px !important;
+              top: -600px !important;
+            }
+          }
         `
       }} />
       <div

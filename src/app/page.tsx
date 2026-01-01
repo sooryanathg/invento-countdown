@@ -184,7 +184,7 @@ export default function CountdownPage() {
               left: calc(50% - 59.96px/2 - 10px) !important;
             }
           }
-          @media (max-width: 393px) {
+          @media (max-width: 389px) {
             [data-countdown="hours"] > * {
               top: 36% !important;
               left: calc(50% - 59.96px/2 - -18px) !important;
@@ -240,6 +240,75 @@ export default function CountdownPage() {
               top: 55% !important;
             }
           }
+          @media (min-width: 390px) and (max-width: 393px) {
+            [data-countdown="hours"] > * {
+              top: 29% !important;
+              left: calc(50% - 59.96px/2 - -10px) !important;
+            }
+            [data-label="hours"] > * {
+              top: 34% !important;
+            }
+            [data-countdown="minutes"] > * {
+              top: 17% !important;
+            }
+            [data-label="minutes"] > * {
+              top: 22% !important;
+            }
+            [data-countdown="seconds"] > * {
+              top: 8% !important;
+            }
+            [data-label="seconds"] > * {
+              top: 12% !important;
+            }
+            [data-countdown="days"] > * {
+              top: 40% !important;
+            }
+            [data-label="days"] > * {
+              top: 50% !important;
+            }
+          }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            [data-countdown="hours"] > * {
+              font-size: 45px !important;
+              top: 20% !important;
+              left: calc(50% - 132.37px/2 + 32px) !important;
+            }
+            [data-label="hours"] > * {
+              font-size: 25px !important;
+              top: 26% !important;
+              left: calc(50% - 132.37px/2 +  30px) !important;
+            }
+            [data-countdown="minutes"] > * {
+              font-size: 30px !important;
+              top: 10% !important;
+              left: calc(50% - 132.37px/2 + 50px) !important;
+            }
+            [data-label="minutes"] > * {
+              font-size: 18px !important;
+              top: 15% !important;
+              left: calc(50% - 132.37px/2 + 33px) !important;
+            }
+            [data-countdown="seconds"] > * {
+              font-size: 25px !important;
+              top: 2% !important;
+              left: calc(50% - 132.37px/2 + 50px) !important;
+            }
+            [data-label="seconds"] > * {
+              font-size: 16px !important;
+              top: 7% !important;
+              left: calc(50% - 132.37px/2 + 32px) !important;
+            }
+            [data-countdown="days"] > * {
+              font-size: 130px !important;
+              top: 32% !important;
+              left: calc(50% - 59.96px/2 - 32px) !important;
+            }
+            [data-label="days"] > * {
+              font-size: 65px !important;
+              top: 45% !important;
+              left: calc(50% - 132.37px/2 + -10px) !important;
+            }
+          }
         `
       }} />
 
@@ -267,6 +336,11 @@ export default function CountdownPage() {
             @media (max-width: 393px) {
               .birds-image {
                 top: 400px !important;
+              }
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+              .birds-image {
+                top: 600px !important;
               }
             }
           `
@@ -321,6 +395,11 @@ export default function CountdownPage() {
                 top: calc(50% - 74px/2 + 200px) !important;
                 font-size: 52px !important;
                 line-height: 62px !important;
+              }
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+              .invento-text {
+                top: calc(50% - 229.09px/2 + 340px) !important;
               }
             }
           `

@@ -41,6 +41,38 @@ export default function DaysDial({ currentDays }: DaysDialProps) {
               top: -65% !important;
             }
           }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .${uniqueId} {
+              transform: scale(0.7) !important;
+              transform-origin: center top !important;
+              top: 400px !important;
+            }
+            .${uniqueId} * {
+              font-size: 180px !important;
+            }
+            .${uniqueId} .day-dial-number[data-offset="-1"] > * {
+              left: -5% !important;
+              right: auto !important;
+              top: -30% !important;
+            }
+            .${uniqueId} .day-dial-number[data-offset="-2"] > * {
+              left: -25% !important;
+              top: -10% !important;
+            }
+            .${uniqueId} .day-dial-number[data-offset="1"] > * {
+              left: 35% !important;
+              right: auto !important;
+              top: -10% !important;
+            }
+            .${uniqueId} .day-dial-number[data-offset="2"] > * {
+              left: 50% !important;
+              right: auto !important;
+              top: -30% !important;
+            }
+            .${uniqueId} .day-dial-number[data-offset="-3"] {
+              display: none !important;
+            }
+          }
         `
       }} />
       <div

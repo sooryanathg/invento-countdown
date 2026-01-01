@@ -196,6 +196,134 @@ export default function TimeUnitDial({
             }
             ` : ''}
           }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .${uniqueId} {
+              transform: scale(0.7) !important;
+              transform-origin: center top !important;
+              top: ${containerTop === '10px' ? '50px' : containerTop === '-200px' ? '-150px' : containerTop} !important;
+            }
+            .${uniqueId} * {
+              font-size: ${parseFloat(fontSize) * 1.2}px !important;
+            }            ${containerTop === '-100px' ? `
+            .${uniqueId} .dial-number-wrapper[data-offset="-1"] > * {
+              left: 0% !important;
+              right: auto !important;
+              top: 60% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-2"] > * {
+              left: -10% !important;
+              top: 70% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-3"] > * {
+              left: -20% !important;
+              top: 65% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-4"] > * {
+              left: -30% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="1"] > * {
+              left: 45% !important;
+              right: auto !important;
+              top: 70% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="2"] > * {
+              left: 55% !important;
+              right: auto !important;
+              top: 55% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="3"] > * {
+              left: 62% !important;
+              right: auto !important;
+              top: 32% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="4"] > * {
+              left: 40% !important;
+              right: auto !important;
+            }
+            .${uniqueId} .dial-number-wrapper:not([data-offset="-3"]):not([data-offset="-2"]):not([data-offset="-1"]):not([data-offset="1"]):not([data-offset="2"]):not([data-offset="3"]) {
+              display: none !important;
+            }
+            ` : ''}            ${useMathMax ? `
+            .${uniqueId} .dial-number-wrapper[data-offset="-1"] > * {
+              left: -5% !important;
+              right: auto !important;
+              top: 50% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-2"] > * {
+              left: -15% !important;
+              right: auto !important;
+              top: 35% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-3"] > * {
+              left: -25% !important;
+              right: auto !important;
+              top: 10% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="1"] > * {
+              left: 50% !important;
+              right: auto !important;
+              top: 60% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="2"] > * {
+              left: 60% !important;
+              right: auto !important;
+              top: 38% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="3"] > * {
+              left: 70% !important;
+              right: auto !important;
+              top: 10% !important;
+            }
+            .${uniqueId} .dial-number-wrapper:not([data-offset="-3"]):not([data-offset="-2"]):not([data-offset="-1"]):not([data-offset="1"]):not([data-offset="2"]):not([data-offset="3"]) {
+              display: none !important;
+            }
+            ` : ''}
+            ${containerTop === '-200px' ? `
+            .${uniqueId} .dial-number-wrapper[data-offset="-1"] > * {
+              left: 3% !important;
+              right: auto !important;
+              top: 45% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-2"] > * {
+              left: -5% !important;
+              top: 55% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-3"] > * {
+              left: -30% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-4"] > * {
+              left: -40% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="-5"] > * {
+              left: -50% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="1"] > * {
+              left:45% !important;
+              right: auto !important;
+              top: 50% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="2"] > * {
+              left: 50% !important;
+              right: auto !important;
+              top: 30% !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="3"] > * {
+              left: 30% !important;
+              right: auto !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="4"] > * {
+              left: 40% !important;
+              right: auto !important;
+            }
+            .${uniqueId} .dial-number-wrapper[data-offset="5"] > * {
+              left: 50% !important;
+              right: auto !important;
+            }
+            .${uniqueId} .dial-number-wrapper:not([data-offset="-2"]):not([data-offset="-1"]):not([data-offset="1"]):not([data-offset="2"]) {
+              display: none !important;
+            }
+            ` : ''}
+          }
         `
       }} />
       <div

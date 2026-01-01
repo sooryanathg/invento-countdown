@@ -52,6 +52,15 @@ export default function SemicircularPinArc() {
                 translate: -50% 0;
               }
             }
+            @media (min-width: 769px) and (max-width: 1024px) {
+              .pin-arc-mobile {
+                transform: scale(0.7);
+                transform-origin: top center;
+                top: 0px !important;
+                left: 50% !important;
+                translate: -50% 0;
+              }
+            }
           `,
         }}
       />

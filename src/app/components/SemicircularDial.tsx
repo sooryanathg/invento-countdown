@@ -52,6 +52,15 @@ export default function SemicircularDial() {
               translate: -50% 0;
             }
           }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .semicircular-dial-mobile {
+              transform: scale(0.7);
+              transform-origin: top center;
+              top: 50px !important;
+              left: 50% !important;
+              translate: -50% 0;
+            }
+          }
         `,
       }} />
       <div

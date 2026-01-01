@@ -17,6 +17,14 @@ export default function RedSemicircle() {
               top: -33px !important;
             }
           }
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .${uniqueId} {
+              width: 130px !important;
+              height: 128px !important;
+              left: calc(50% - 130px/2) !important;
+              top: -65px !important;
+            }
+          }
         `
       }} />
       <div
