@@ -61,11 +61,11 @@ export interface DaysDialConfig extends DialNumberConfig {
 }
 
 export const daysDialConfig: DaysDialConfig[] = [
-  { offset: -3, left: '0.23%', right: '92.06%', top: '18.17%', bottom: '62.89%', transform: 'matrix(0.82, 0.58, -0.62, 0.79, 0, -50)' },
+  { offset: -3, left: '0.23%', right: '88.06%', top: '18.17%', bottom: '62.89%', transform: 'matrix(0.82, 0.58, -0.62, 0.79, 0, -50)' },
   { offset: -2, left: '10.16%', right: '82.13%', top: '32.82%', bottom: '48.25%', transform: 'matrix(0.82, 0.58, -0.62, 0.79, 0, -30)' },
   { offset: -1, left: '28.76%', right: '63.42%', top: '42.05%', bottom: '39.3%', transform: 'matrix(0.97, 0.26, -0.28, 0.96, -20, 30)' },
-  { offset: 1, left: '65.29%', right: '26.94%', top: '36.13%', bottom: '45.08%', transform: 'matrix(0.9, -0.43, 0.47, 0.88, 0, 0)' },
-  { offset: 2, left: '82.13%', right: '15.17%', top: '28.39%', bottom: '57.59%', transform: 'matrix(0.69, -0.73, 0.76, 0.65, 0, -50)' },
-  { offset: 3, left: '91.67%', right: '5.63%', top: '9.85%', bottom: '76.13%', transform: 'matrix(0.69, -0.73, 0.76, 0.65, 0, 0)', specialWrapper: true },
+  { offset: 1, left: '55.29%', right: '26%', top: '36.13%', bottom: '45.08%', transform: 'matrix(0.9, -0.43, 0.47, 0.88, 0, 0)' },
+  { offset: 2, left: '71.13%', right: '15.17%', top: '26%', bottom: '57.59%', transform: 'matrix(0.69, -0.73, 0.76, 0.65, 0, -50)' },
+  { offset: 3, left: '83.67%', right: '11.63%', top: '9.85%', bottom: '76.13%', transform: 'matrix(0.69, -0.73, 0.76, 0.65, 0, 0)', specialWrapper: true },
 ];
 

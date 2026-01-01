@@ -14,7 +14,7 @@ import TrapezoidGradient from './components/TrapezoidGradient';
 import { hoursDialConfig, minutesDialConfig, secondsDialConfig } from './components/dialConfigs';
 
 export default function CountdownPage() {
-  const eventDate = new Date('2026-01-28T23:59:59').getTime();
+  const eventDate = new Date('2026-01-29T23:59:59').getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -147,21 +147,21 @@ export default function CountdownPage() {
             [data-countdown="hours"] > * {
               top: 25% !important;
               font-size: 40px !important;
-              left: calc(50% - 59.96px/2 - -5px) !important;
+              left: calc(50% - 59.96px/2 - -8px) !important;
             }
             [data-label="hours"] > * {
               top: 30% !important;
               font-size: 20px !important;
             }
             [data-countdown="minutes"] > * {
-              top: 15% !important;
+              top: 15.5% !important;
               font-size: 32px !important;
-              left: calc(50% - 59.96px/2 - -10px) !important;
+              left: calc(50% - 59.96px/2 - -15px) !important;
             }
             [data-label="minutes"] > * {
-              top: 19% !important;
+              top: 20% !important;
               font-size: 15px !important;
-              left: calc(50% - 59.96px/2 - 5px) !important;
+              left: calc(50% - 59.96px/2 - 0px) !important;
             }
             [data-countdown="seconds"] > * {
               top: 7% !important;
@@ -174,12 +174,12 @@ export default function CountdownPage() {
               left: calc(50% - 59.96px/2) !important;
             }
             [data-countdown="days"] > * {
-              top: 40% !important;
+              top: 36.5% !important;
               font-size: 63.5px !important;
               left: calc(50% - 59.96px/2 - 10px) !important;
             }
             [data-label="days"] > * {
-              top: 48% !important;
+              top: 44% !important;
               font-size: 30px !important;
               left: calc(50% - 59.96px/2 - 10px) !important;
             }

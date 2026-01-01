@@ -33,11 +33,12 @@ export default function DaysDial({ currentDays }: DaysDialProps) {
             .${uniqueId} .day-dial-number[data-offset="-1"] > * {
               left: -10% !important;
               right: auto !important;
-              top: 0% !important;
+              top: -80% !important;
             }
             .${uniqueId} .day-dial-number[data-offset="1"] > * {
               left: auto !important;
               right: -10% !important;
+              top: -65% !important;
             }
           }
         `

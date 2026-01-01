@@ -56,7 +56,7 @@ export default function TrapezoidGradient() {
         />
         <path
           className="trapezoid-path-mobile"
-          d="M106 0H166L272 3015H0L106 0Z"
+          d="M128 0H144L384 3015H-112L128 0Z"
           fill="url(#paint0_linear_580_8906_mobile)"
           fillOpacity="0.5"
           style={{ display: 'none' }}
