@@ -1,3 +1,7 @@
+'use client';
+
+import { useId } from 'react';
+
 interface CountdownDisplayProps {
   value: number;
   top: string;
@@ -22,7 +26,8 @@ export default function CountdownDisplay({
   const baseLineHeight = parseFloat(lineHeight || defaultLineHeight);
   const mobileLineHeight = `${baseLineHeight * 0.4}px`;
   const mobileWidth = '24px';
-  const uniqueId = `countdown-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `countdown-${id.replace(/:/g, '')}`;
   
   return (
     <>

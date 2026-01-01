@@ -1,3 +1,6 @@
+'use client';
+import { useId } from 'react';
+
 interface EllipseRingProps {
   width: string;
   height: string;
@@ -13,7 +16,8 @@ export default function EllipseRing({
   top,
   zIndex = 2,
 }: EllipseRingProps) {
-  const uniqueId = `ellipse-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `ellipse-${id.replace(/:/g, '')}`;
   const baseWidth = parseFloat(width);
   const baseHeight = parseFloat(height);
   const mobileWidth = `${baseWidth * 0.4}px`;

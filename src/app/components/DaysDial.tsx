@@ -1,3 +1,5 @@
+'use client';
+import { useId } from 'react';
 import DialNumber from './DialNumber';
 import { daysDialConfig, DaysDialConfig } from './dialConfigs';
 
@@ -6,7 +8,8 @@ interface DaysDialProps {
 }
 
 export default function DaysDial({ currentDays }: DaysDialProps) {
-  const uniqueId = `daysdial-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `daysdial-${id.replace(/:/g, '')}`;
   
   return (
     <>

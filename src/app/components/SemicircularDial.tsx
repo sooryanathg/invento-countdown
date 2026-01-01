@@ -1,3 +1,5 @@
+'use client';
+
 export default function SemicircularDial() {
   const centerX = 864;
   const centerY = -314;
@@ -19,8 +21,8 @@ export default function SemicircularDial() {
     return {
       id: i,
       angle,
-      x: centerX + pinRadius * Math.cos(rad),
-      y: centerY + pinRadius * Math.sin(rad),
+      x: parseFloat((centerX + pinRadius * Math.cos(rad)).toFixed(1)),
+      y: parseFloat((centerY + pinRadius * Math.sin(rad)).toFixed(1)),
     };
   });
 

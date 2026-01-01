@@ -1,3 +1,7 @@
+'use client';
+
+import { useId } from 'react';
+
 interface TimeLabelProps {
   label: string;
   top: string;
@@ -16,7 +20,8 @@ export default function TimeLabel({
   const mobileFontSize = `${baseFontSize * 0.4}px`;
   const mobileLineHeight = `${73 * 0.4}px`;
   const mobileWidth = '48px';
-  const uniqueId = `timelabel-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `timelabel-${id.replace(/:/g, '')}`;
   
   return (
     <>

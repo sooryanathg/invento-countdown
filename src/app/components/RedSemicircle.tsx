@@ -1,5 +1,9 @@
+'use client';
+import { useId } from 'react';
+
 export default function RedSemicircle() {
-  const uniqueId = `red-semicircle-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `red-semicircle-${id.replace(/:/g, '')}`;
   
   return (
     <>

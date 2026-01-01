@@ -1,3 +1,5 @@
+'use client';
+import { useId } from 'react';
 import DialNumber from './DialNumber';
 
 interface DialNumberConfig {
@@ -25,7 +27,8 @@ export default function TimeUnitDial({
   fontSize = '35px',
   useMathMax = false,
 }: TimeUnitDialProps) {
-  const uniqueId = `timeunit-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `timeunit-${id.replace(/:/g, '')}`;
   const mobileFontSize = `${parseFloat(fontSize) * 0.4}px`;
   
   // For mobile seconds dial, use relative offsets instead of fixed ones

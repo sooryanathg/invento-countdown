@@ -1,5 +1,9 @@
+'use client';
+import { useId } from 'react';
+
 export default function TrapezoidGradient() {
-  const uniqueId = `trapezoid-${Math.random().toString(36).substr(2, 9)}`;
+  const id = useId();
+  const uniqueId = `trapezoid-${id.replace(/:/g, '')}`;
   
   return (
     <>
