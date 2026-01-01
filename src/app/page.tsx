@@ -220,7 +220,7 @@ export default function CountdownPage() {
         />
       </div>
       <div
-        className="invento-text absolute"
+        className={`invento-text absolute ${showInvento ? 'invento-animate' : ''}`}
         style={{
           width: '998px',
           maxWidth: '90vw',
@@ -237,7 +237,7 @@ export default function CountdownPage() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          opacity: showInvento ? 1 : 0,
+          opacity: 0,
         }}
       >
         <style dangerouslySetInnerHTML={{
