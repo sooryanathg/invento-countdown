@@ -324,7 +324,18 @@ export default function TimeUnitDial({
             }
             ` : ''}
           }
-        `
+          @media (min-width: 1440px) and (max-width: 1440px) {
+            .${uniqueId} {
+              left: -40px !important;
+            }
+          }          @media (min-width: 2560px) {
+            .${uniqueId} {
+              left: ${containerTop === '10px' ? '550px' : containerTop === '-100px' ? '550px' : '500px'} !important;
+              transform: scale(${containerTop === '-200px' ? '1.2' : '1.6'}) !important;
+              transform-origin: center top !important;
+              top: ${containerTop === '-100px' ? '-70px' : containerTop === '10px' ? '70px' : containerTop} !important;
+            }
+          }        `
       }} />
       <div
         className={`${uniqueId} absolute`}

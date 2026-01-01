@@ -73,6 +73,14 @@ export default function DaysDial({ currentDays }: DaysDialProps) {
               display: none !important;
             }
           }
+          @media (min-width: 2560px) {
+            .${uniqueId} {
+              left: 500px !important;
+              transform: scale(1.6) !important;
+              transform-origin: center top !important;
+              top: 240px !important;
+            }
+          }
         `
       }} />
       <div

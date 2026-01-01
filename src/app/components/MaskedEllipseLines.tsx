@@ -61,7 +61,17 @@ export default function SemicircularPinArc() {
                 translate: -50% 0;
               }
             }
-          `,
+            @media (min-width: 1440px) and (max-width: 1440px) {
+              .pin-arc-mobile {
+                left: -125px !important;
+              }
+            }            @media (min-width: 2560px) {
+              .pin-arc-mobile {
+                left: 400px !important;
+                transform: scale(1.6) !important;
+                transform-origin: center top !important;
+              }
+            }          `,
         }}
       />
 

@@ -43,6 +43,13 @@ export default function EllipseRing({
               top: -600px !important;
             }
           }
+          @media (min-width: 2560px) {
+            .${uniqueId} {
+              transform: scale(1.6) matrix(1, -0.01, 0.01, 1, 0, 0) !important;
+              transform-origin: center top !important;
+              top: -1400px !important;
+            }
+          }
         `
       }} />
       <div

@@ -309,6 +309,87 @@ export default function CountdownPage() {
               left: calc(50% - 132.37px/2 + -10px) !important;
             }
           }
+          @media (min-width: 1024px) and (max-width: 1024px) {
+            [data-countdown="hours"] > * {
+              top: 20% !important;
+            }
+            [data-label="hours"] > * {
+              top: 25% !important;
+            }
+          }
+          @media (min-width: 1440px) and (max-width: 1440px) {
+            [data-countdown="hours"] > * {
+              top: 17% !important;
+            }
+            [data-label="hours"] > * {
+              top: 22% !important;
+            }
+            [data-countdown="minutes"] > * {
+              top: 10% !important;
+            }
+            [data-label="minutes"] > * {
+              top: 14% !important;
+            }
+            [data-countdown="seconds"] > * {
+              top: 3% !important;
+            }
+            [data-label="seconds"] > * {
+              top: 8% !important;
+            }
+            [data-countdown="days"] > * {
+              top: 25% !important;
+            }
+            [data-label="days"] > * {
+              top: 35% !important;
+            }
+          }
+          @media (min-width: 2560px) {
+            [data-countdown="hours"] > * {
+              top: 35% !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-label="hours"] > * {
+              top: 42% !important;
+              left: calc(50% - 132.37px/2 + 40px) !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-countdown="minutes"] > * {
+              top: 24% !important;
+              left: calc(50% - 132.37px/2 + 60px) !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-label="minutes"] > * {
+              top: 30% !important;
+              left: calc(50% - 132.37px/2 + 40px) !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-countdown="seconds"] > * {
+              top: 9% !important;
+              left: calc(50% - 132.37px/2 + 60px) !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-label="seconds"] > * {
+              top: 18% !important;
+              left: calc(50% - 132.37px/2 + 50px) !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-countdown="days"] > * {
+              top: 50% !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+            [data-label="days"] > * {
+              top: 60% !important;
+              transform: scale(1.6) !important;
+              transform-origin: center !important;
+            }
+          }
         `
       }} />
 
@@ -341,6 +422,18 @@ export default function CountdownPage() {
             @media (min-width: 769px) and (max-width: 1024px) {
               .birds-image {
                 top: 600px !important;
+              }
+            }
+            @media (min-width: 1440px) and (max-width: 1440px) {
+              .birds-image {
+                top: 650px !important;
+              }
+            }
+            @media (min-width: 2560px) {
+              .birds-image {
+                top: 700px !important;
+                transform: scale(1.6) !important;
+                transform-origin: center !important;
               }
             }
           `
@@ -402,7 +495,17 @@ export default function CountdownPage() {
                 top: calc(50% - 229.09px/2 + 340px) !important;
               }
             }
-          `
+            @media (min-width: 1440px) and (max-width: 1440px) {
+              .invento-text {
+                top: calc(50% - 229.09px/2 + 380px) !important;
+              }
+            }            @media (min-width: 2560px) {
+              .invento-text {
+                top: calc(50% - 229.09px/2 + 450px) !important;
+                transform: scale(1.6) !important;
+                transform-origin: center !important;
+              }
+            }          `
         }} />
         INVENTO
       </div>

@@ -69,6 +69,34 @@ export default function TrapezoidGradient() {
               display: none !important;
             }
           }
+          @media (min-width: 1440px) and (max-width: 1440px) {
+            .${uniqueId} {
+              height: 1400px !important;
+              top: -60px !important;
+            }
+            .${uniqueId} svg {
+              viewBox: "0 0 272 1400" !important;
+            }
+            .${uniqueId} .trapezoid-path-desktop {
+              d: path("M112.404 -15H155.878L272 1400H0L112.404 -15Z") !important;
+            }
+          }
+          @media (min-width: 2560px) {
+            .${uniqueId} {
+              width: 300px !important;
+              height: 1600px !important;
+              left: calc(50% - 300px/2) !important;
+              top: -140px !important;
+              transform: scale(1.6) !important;
+              transform-origin: center top !important;
+            }
+            .${uniqueId} svg {
+              viewBox: "0 0 300 1600" !important;
+            }
+            .${uniqueId} .trapezoid-path-desktop {
+              d: path("M112.404 -15H159.904L300 1600H0L112.404 -15Z") !important;
+            }
+          }
         `
       }} />
       <div

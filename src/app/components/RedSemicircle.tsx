@@ -25,6 +25,13 @@ export default function RedSemicircle() {
               top: -65px !important;
             }
           }
+          @media (min-width: 2560px) {
+            .${uniqueId} {
+              transform: scale(1.6) !important;
+              transform-origin: center top !important;
+              top: -120px !important;
+            }
+          }
         `
       }} />
       <div
