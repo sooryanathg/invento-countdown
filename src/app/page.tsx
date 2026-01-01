@@ -24,6 +24,7 @@ export default function CountdownPage() {
     seconds: 0,
   });
   const [isExpired, setIsExpired] = useState(false);
+  const [showInvento, setShowInvento] = useState(false);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -54,8 +55,31 @@ export default function CountdownPage() {
     return () => clearInterval(timer);
   }, [eventDate]);
 
+  useEffect(() => {
+    setShowInvento(true);
+  }, []);
+
   return (
     <div className="h-screen bg-white relative overflow-hidden">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes inventoSlideUp {
+            from {
+              opacity: 0;
+              transform: translateY(40px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .invento-animate {
+            animation: inventoSlideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards 1.5s;
+          }
+        `,
+      }} />
+
       {/* Semicircular dial */}
       <SemicircularDial />
 
@@ -235,7 +259,7 @@ export default function CountdownPage() {
 
       {/* INVENTO Text */}
       <div
-        className="invento-text absolute"
+        className={`invento-text absolute ${showInvento ? 'invento-animate' : ''}`}
         style={{
           width: '998px',
           maxWidth: '90vw',
@@ -252,6 +276,7 @@ export default function CountdownPage() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
+          opacity: 0,
         }}
       >
         <style dangerouslySetInnerHTML={{

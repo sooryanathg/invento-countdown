@@ -1,6 +1,19 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 export default function SemicircularPinArc() {
+  const [isFastRotation, setIsFastRotation] = useState(true);
+
+  useEffect(() => {
+    // After 2.7s (1.5s delay + 1.2s animation), switch to normal speed
+    const timer = setTimeout(() => {
+      setIsFastRotation(false);
+    }, 2700);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const WIDTH = 1728;
   const HEIGHT = 529;
 
@@ -79,7 +92,7 @@ export default function SemicircularPinArc() {
               type="rotate"
               from={`0 ${centerX} ${centerY}`}
               to={`360 ${centerX} ${centerY}`}
-              dur="72s"                 // ✅ divisible by 360
+              dur={isFastRotation ? "12s" : "60s"}
               repeatCount="indefinite"
               calcMode="linear"         // ✅ no easing resync
             />

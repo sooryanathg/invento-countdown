@@ -1,6 +1,19 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 export default function SemicircularDial() {
+  const [isFastRotation, setIsFastRotation] = useState(true);
+
+  useEffect(() => {
+    // After 2.7s (1.5s delay + 1.2s animation), switch to normal speed
+    const timer = setTimeout(() => {
+      setIsFastRotation(false);
+    }, 2700);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const centerX = 864;
   const centerY = -314;
 
@@ -67,7 +80,7 @@ export default function SemicircularDial() {
             type="rotate"
             from={`0 ${centerX} ${centerY}`}
             to={`360 ${centerX} ${centerY}`}
-            dur="20s"
+            dur={isFastRotation ? "3.5s" : "17s"}
             repeatCount="indefinite"
           />
 
