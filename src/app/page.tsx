@@ -184,6 +184,62 @@ export default function CountdownPage() {
               left: calc(50% - 59.96px/2 - 10px) !important;
             }
           }
+          @media (max-width: 393px) {
+            [data-countdown="hours"] > * {
+              top: 36% !important;
+              left: calc(50% - 59.96px/2 - -18px) !important;
+            }
+            [data-label="hours"] > * {
+              top: 43% !important;
+            }
+            [data-countdown="minutes"] > * {
+              top: 22% !important;
+            }
+            [data-label="minutes"] > * {
+              top: 28% !important;
+            }
+            [data-countdown="seconds"] > * {
+              top: 10.5% !important;
+            }
+            [data-label="seconds"] > * {
+              top: 16% !important;
+            }
+            [data-countdown="days"] > * {
+              top: 50% !important;
+            }
+            [data-label="days"] > * {
+              top: 60% !important;
+            }
+          }
+          
+          @media (max-width: 360px) {
+            [data-countdown="hours"] > * {
+              top: 32% !important;
+              left: calc(50% - 59.96px/2 - -10px) !important;
+            }
+            [data-label="hours"] > * {
+              top: 38% !important;
+              left: calc(50% - 59.96px/2 - -2px) !important;
+            }
+            [data-countdown="minutes"] > * {
+              top: 20% !important;
+            }
+            [data-label="minutes"] > * {
+              top: 25% !important;
+            }
+            [data-countdown="seconds"] > * {
+              top: 10% !important;
+            }
+            [data-label="seconds"] > * {
+              top: 14% !important;
+            }
+            [data-countdown="days"] > * {
+              top: 45% !important;
+            }
+            [data-label="days"] > * {
+              top: 55% !important;
+            }
+          }
         `
       }} />
 
@@ -206,6 +262,11 @@ export default function CountdownPage() {
                 height: 58px !important;
                 left: 20px !important;
                 top: 500px !important;
+              }
+            }
+            @media (max-width: 393px) {
+              .birds-image {
+                top: 400px !important;
               }
             }
           `
@@ -252,6 +313,16 @@ export default function CountdownPage() {
                 line-height: 76px !important;
               }
             }
+            @media (max-width: 393px) {
+              .invento-text {
+                width: 320px !important;
+                height: 74px !important;
+                left: calc(50% - 320px/2) !important;
+                top: calc(50% - 74px/2 + 200px) !important;
+                font-size: 52px !important;
+                line-height: 62px !important;
+              }
+            }
           `
         }} />
         INVENTO
@@ -280,6 +351,16 @@ export default function CountdownPage() {
               .bottom-image-container img {
                 transform: scaleX(-1) scale(1.8) translateY(-100px) !important;
                 transform-origin: center !important;
+              }
+            }
+            @media (max-width: 393px) {
+              .bottom-image-container img {
+                transform: scaleX(-1) scale(1.8) translateY(-50px) !important;
+              }
+            }
+            @media (min-width: 390px) and (max-width: 410px) {
+              .invento-text {
+                top: calc(50% - 92px/2 + 240px) !important;
               }
             }
           `

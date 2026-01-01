@@ -29,6 +29,29 @@ export default function TrapezoidGradient() {
               display: block !important;
             }
           }
+          @media (max-width: 360px) {
+            .${uniqueId} {
+              width: 300px !important;
+              height: calc(240vh + 15px) !important;
+              left: calc(50% - 300px/2) !important;
+            }
+            .${uniqueId} svg {
+              viewBox: "-218 0 718 5000" !important;
+            }
+            .${uniqueId} .trapezoid-path-mobile {
+              d: path("M128 0H144L500 5000H-218L128 0Z") !important;
+            }
+          }
+          @media (max-width: 393px) {
+            .${uniqueId} .trapezoid-path-mobile {
+              d: path("M136 0H136L305 3015H-33L136 0Z") !important;
+            }
+          }
+          @media (min-width: 390px) and (max-width: 410px) {
+            .${uniqueId} .trapezoid-path-mobile {
+              d: path("M136 0H136L342 3015H-70L136 0Z") !important;
+            }
+          }
         `
       }} />
       <div
@@ -78,7 +101,7 @@ export default function TrapezoidGradient() {
             x1="136"
             y1="0"
             x2="154"
-            y2="2000"
+            y2="4000"
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#C20C19" />
