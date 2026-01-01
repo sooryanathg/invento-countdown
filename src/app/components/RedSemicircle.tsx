@@ -4,7 +4,7 @@ import { useId } from 'react';
 export default function RedSemicircle() {
   const id = useId();
   const uniqueId = `red-semicircle-${id.replace(/:/g, '')}`;
-  
+
   return (
     <>
       <style dangerouslySetInnerHTML={{

@@ -10,7 +10,7 @@ interface DaysDialProps {
 export default function DaysDial({ currentDays }: DaysDialProps) {
   const id = useId();
   const uniqueId = `daysdial-${id.replace(/:/g, '')}`;
-  
+
   return (
     <>
       <style dangerouslySetInnerHTML={{

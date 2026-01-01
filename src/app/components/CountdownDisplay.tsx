@@ -17,10 +17,7 @@ export default function CountdownDisplay({
   left = 'calc(50% - 59.96px/2 - -5px)',
   lineHeight,
 }: CountdownDisplayProps) {
-  // Default lineHeight based on fontSize if not provided
   const defaultLineHeight = fontSize === '80px' ? '196px' : '147px';
-  
-  // Calculate mobile values (approximately 0.4x scale for mobile)
   const baseFontSize = parseFloat(fontSize || '50px');
   const mobileFontSize = `${baseFontSize * 0.4}px`;
   const baseLineHeight = parseFloat(lineHeight || defaultLineHeight);

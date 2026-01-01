@@ -23,8 +23,6 @@ export default function SemicircularPinArc() {
   const radius = 750.83;
 
   const pinCount = 360;
-
-  // Pin style
   const pinLength = 18;
   const pinStrokeWidth = 4.32929;
 
@@ -42,7 +40,6 @@ export default function SemicircularPinArc() {
 
   return (
     <>
-      {/* Mobile scaling */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -94,7 +91,7 @@ export default function SemicircularPinArc() {
               to={`360 ${centerX} ${centerY}`}
               dur={isFastRotation ? "12s" : "60s"}
               repeatCount="indefinite"
-              calcMode="linear"         // ✅ no easing resync
+              calcMode="linear"
             />
 
             {pins.map((pin) => (

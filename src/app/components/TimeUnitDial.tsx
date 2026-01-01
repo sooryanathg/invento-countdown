@@ -30,8 +30,6 @@ export default function TimeUnitDial({
   const id = useId();
   const uniqueId = `timeunit-${id.replace(/:/g, '')}`;
   const mobileFontSize = `${parseFloat(fontSize) * 0.4}px`;
-  
-  // For mobile seconds dial, use relative offsets instead of fixed ones
   const isMobileSeconds = typeof window !== 'undefined' && window.innerWidth <= 768 && containerTop === '-200px';
   const displayNumbers = isMobileSeconds ? [
     { offset: -5, left: '17.5%', right: '74.63%', top: '37%', transform: 'matrix(0.82, 0.58, -0.62, 0.79, 90, -20)' },

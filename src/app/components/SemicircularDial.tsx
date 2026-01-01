@@ -47,12 +47,11 @@ export default function SemicircularDial() {
             .semicircular-dial-mobile {
               transform: scale(0.35);
               transform-origin: top center;
-              top: 140px !important;   /* pull it back into view */
+              top: 140px !important;
               left: 50% !important;
               translate: -50% 0;
             }
           }
-
         `,
       }} />
       <div
@@ -73,7 +72,6 @@ export default function SemicircularDial() {
         xmlns="http://www.w3.org/2000/svg"
         style={{ width: "100%", height: "100%" }}
       >
-        {/* ROTATION — SVG NATIVE (NO JUMP) */}
         <g transform={`rotate(0 ${centerX} ${centerY})`}>
           <animateTransform
             attributeName="transform"
@@ -83,8 +81,6 @@ export default function SemicircularDial() {
             dur={isFastRotation ? "3.5s" : "17s"}
             repeatCount="indefinite"
           />
-
-          {/* TRUE CIRCULAR ARC */}
           <circle
             cx={centerX}
             cy={centerY}
@@ -94,7 +90,6 @@ export default function SemicircularDial() {
             strokeWidth={strokeWidth}
           />
 
-          {/* PINS — PERFECTLY MATCHED */}
           {pins.map((pin) => (
             <rect
               key={pin.id}

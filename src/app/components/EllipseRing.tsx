@@ -18,10 +18,8 @@ export default function EllipseRing({
 }: EllipseRingProps) {
   const id = useId();
   const uniqueId = `ellipse-${id.replace(/:/g, '')}`;
-  const baseWidth = parseFloat(width);
-  const baseHeight = parseFloat(height);
-  const mobileWidth = `${baseWidth * 0.4}px`;
-  const mobileHeight = `${baseHeight * 0.4}px`;
+  const mobileWidth = `${parseFloat(width) * 0.4}px`;
+  const mobileHeight = `${parseFloat(height) * 0.4}px`;
   
   return (
     <>

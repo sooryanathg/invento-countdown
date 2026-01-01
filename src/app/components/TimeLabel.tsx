@@ -15,7 +15,6 @@ export default function TimeLabel({
   fontSize = '20px',
   left = 'calc(50% - 132.37px/2 + 25px)',
 }: TimeLabelProps) {
-  // Calculate mobile values (approximately 0.4x scale for mobile)
   const baseFontSize = parseFloat(fontSize || '20px');
   const mobileFontSize = `${baseFontSize * 0.4}px`;
   const mobileLineHeight = `${73 * 0.4}px`;

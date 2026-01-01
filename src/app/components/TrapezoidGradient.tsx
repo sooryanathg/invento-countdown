@@ -4,7 +4,7 @@ import { useId } from 'react';
 export default function TrapezoidGradient() {
   const id = useId();
   const uniqueId = `trapezoid-${id.replace(/:/g, '')}`;
-  
+
   return (
     <>
       <style dangerouslySetInnerHTML={{

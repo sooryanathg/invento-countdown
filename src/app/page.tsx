@@ -14,7 +14,6 @@ import TrapezoidGradient from './components/TrapezoidGradient';
 import { hoursDialConfig, minutesDialConfig, secondsDialConfig } from './components/dialConfigs';
 
 export default function CountdownPage() {
-  // Set your event date here (format: YYYY-MM-DDTHH:mm:ss)
   const eventDate = new Date('2026-01-28T23:59:59').getTime();
   
   const [timeLeft, setTimeLeft] = useState({
@@ -44,10 +43,8 @@ export default function CountdownPage() {
       };
     };
 
-    // Calculate immediately
     setTimeLeft(calculateTimeLeft());
 
-    // Update every second
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
@@ -80,29 +77,20 @@ export default function CountdownPage() {
         `,
       }} />
 
-      {/* Semicircular dial */}
       <SemicircularDial />
-
-      {/* Outer ellipse */}
       <EllipseRing
         width="1120px"
         height="1093px"
         left="calc(50% - 1120px/2 - 10px)"
         top="-915px"
       />
-
-      {/* Inner ellipse */}
       <EllipseRing
         width="1100px"
         height="1073px"
         left="calc(50% - 1100px/2 - 10px)"
         top="-905px"
       />
-
-      {/* Masked Ellipse with Lines */}
       <MaskedEllipseLines />
-
-      {/* Hours numbers around the dial */}
       <TimeUnitDial
         currentValue={timeLeft.hours}
         maxValue={24}
@@ -112,10 +100,7 @@ export default function CountdownPage() {
         useMathMax={true}
       />
 
-      {/* Days numbers around the dial */}
       <DaysDial currentDays={timeLeft.days} />
-
-      {/* Minutes numbers around the dial */}
       <TimeUnitDial
         currentValue={timeLeft.minutes}
         maxValue={60}
@@ -123,8 +108,6 @@ export default function CountdownPage() {
         containerTop="-100px"
         fontSize="35px"
       />
-
-      {/* Seconds numbers around the dial */}
       <TimeUnitDial
         currentValue={timeLeft.seconds}
         maxValue={60}
@@ -133,42 +116,27 @@ export default function CountdownPage() {
         fontSize="35px"
       />
 
-      {/* Hours countdown - Large number */}
       <div data-countdown="hours">
         <CountdownDisplay value={timeLeft.hours} top="32%" fontSize="50px" />
       </div>
-
-      {/* Hours label */}
       <div data-label="hours">
         <TimeLabel label="Hours" top="42%" fontSize="30px" left="calc(50% - 132.37px/2 + 20px)" />
       </div>
-
-      {/* Minutes countdown - Large number */}
       <div data-countdown="minutes">
         <CountdownDisplay value={timeLeft.minutes} top="19%" fontSize="35px" />
       </div>
-
-      {/* Minutes label */}
       <div data-label="minutes">
         <TimeLabel label="Minutes" top="28%" fontSize="20px" left="calc(50% - 132.37px/2 + 20px)" />
       </div>
-
-      {/* Seconds countdown - Large number */}
       <div data-countdown="seconds">
         <CountdownDisplay value={timeLeft.seconds} top="6%" fontSize="30px" />
       </div>
-
-      {/* Seconds label */}
       <div data-label="seconds">
         <TimeLabel label="Seconds" top="15%" fontSize="18px" left="calc(50% - 132.37px/2 + 25px)" />
       </div>
-
-      {/* Days countdown - Large number */}
       <div data-countdown="days">
         <CountdownDisplay value={timeLeft.days} top="46%" fontSize="80px" left="calc(50% - 59.96px/2 - 5px)" />
       </div>
-
-      {/* Days label */}
       <div data-label="days">
         <TimeLabel label="Days" top="59.5%" fontSize="40px" left="calc(50% - 132.37px/2 + 10px)" />
       </div>
@@ -219,13 +187,8 @@ export default function CountdownPage() {
         `
       }} />
 
-      {/* Red circle at top */}
       <RedSemicircle />
-
-      {/* Trapezoid gradient background */}
       <TrapezoidGradient />
-
-      {/* Birds silhouette image */}
       <div
         className="birds-image absolute z-10"
         style={{
@@ -256,10 +219,8 @@ export default function CountdownPage() {
           }}
         />
       </div>
-
-      {/* INVENTO Text */}
       <div
-        className={`invento-text absolute ${showInvento ? 'invento-animate' : ''}`}
+        className="invento-text absolute"
         style={{
           width: '998px',
           maxWidth: '90vw',
@@ -276,7 +237,7 @@ export default function CountdownPage() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          opacity: 0,
+          opacity: showInvento ? 1 : 0,
         }}
       >
         <style dangerouslySetInnerHTML={{
@@ -328,10 +289,7 @@ export default function CountdownPage() {
           alt="Countdown bottom decoration"
           className="w-full h-full object-cover block"
         />
-        </div>
-      
-      {/* Countdown data is available in: timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds */}
-      {/* isExpired flag indicates if countdown has ended */}
+      </div>
     </div>
   );
 }
