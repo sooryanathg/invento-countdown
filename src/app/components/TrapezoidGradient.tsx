@@ -42,17 +42,17 @@ export default function TrapezoidGradient() {
               d: path("M128 -100H144L500 5000H-218L128 -100Z") !important;
             }
           }
-          @media (max-width: 393px) {
+          @media (max-width: 380px) {
             .${uniqueId} {
-              width: 330px !important;
+              width: 270px !important;
               height: calc(180vh + 15px) !important;
-              left: calc(50% - 330px/2) !important;
+              left: calc(50% - 140px) !important;
             }
             .${uniqueId} svg {
-              viewBox: "-65 0 430 3500" !important;
+              viewBox: "-47 0 360 3500" !important;
             }
             .${uniqueId} .trapezoid-path-mobile {
-              d: path("M136 0H194L365 3500H-93L136 0Z") !important;
+              d: path("M136 0H144L315 3500H-23L136 0Z") !important;
             }
           }
           @media (min-width: 390px) and (max-width: 410px) {
