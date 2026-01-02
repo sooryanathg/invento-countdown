@@ -439,7 +439,7 @@ export default function CountdownPage() {
           `
         }} />
         <img
-          src="/countdown-left.webp"
+          src="/birds.svg"
           alt="Flying birds silhouette"
           className="w-full h-full object-contain block"
           onError={(e) => {
@@ -548,7 +548,7 @@ export default function CountdownPage() {
           `
         }} />
         <img
-          src="/countdown-bottom.webp"
+          src="/mountain.svg"
           alt="Countdown bottom decoration"
           className="w-full h-full object-cover block"
         />
